@@ -60,7 +60,7 @@ I also utilized beautifulsoup, I used this to web scrape data from a website to 
 information. This scrapes and parses specific data from the linked website and lets my website use it for my table.
 
   def EventScrape(request):
-    r = requests.get("http://ufcstats.com/statistics/events/completed")
+    r = requests.get("**link**")
     event_list = []
     bs = BeautifulSoup(r.content, 'html.parser')
     upcoming_events = bs.find('div', class_='b-statistics__sub-entry')
