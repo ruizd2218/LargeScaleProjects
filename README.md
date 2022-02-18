@@ -12,6 +12,7 @@ A vital part of this project is the Create, read, update and delete features, he
 
 My create function allows you to fill out a form that simply stores your entries into a large database.
 
+'''
   def MMACreate(request): 
       form = ChampForm(data=request.POST or None)
       # if form data is valid
@@ -23,18 +24,18 @@ My create function allows you to fill out a form that simply stores your entries
 
       context = {'form': form}
       return render(request, "MMAStats/MMA_create.html", context)
-
+'''
 It then sends the data to my html and sorts it by rank using this simple function
-
+'''
   def DisplayStats(request):
       champion_stats = Champions.objects.all().order_by("p4p_rank")
       context = {'champion_stats': champion_stats}
       return render(request, 'MMAStats/MMA_stats.html', context)
-      
+''' 
 You can also update and delete specific data if needed. These functions allow us to do so. The update function 
 redirects you to a page with the same form you used to create, this time however, it has the data of the entry 
 that you wish to edit
-  
+'''
   def UpdateStat(request, pk):
       stat = Champions.objects.get(pk=pk)
       form = ChampForm(request.POST or None, instance=stat)
@@ -44,8 +45,8 @@ that you wish to edit
 
       context = {'stat': stat, 'form': form}
       return render(request, 'MMAStats/MMA_update.html', context)
-
-
+'''
+'''
   def DeleteStat(request, pk):
       context = {}
       stat = get_object_or_404(Champions, pk=pk)
@@ -55,10 +56,10 @@ that you wish to edit
           return redirect("MMA_Stats")
 
       return render(request, "MMAStats/MMA_delete.html", context)
-
+'''
 I also utilized beautifulsoup, I used this to web scrape data from a website to gather the latest event 
 information. This scrapes and parses specific data from the linked website and lets my website use it for my table.
-
+'''
   def EventScrape(request):
     r = requests.get("**link**")
     event_list = []
@@ -73,7 +74,7 @@ information. This scrapes and parses specific data from the linked website and l
 
     context = {'event_list': event_list}
     return render(request, 'MMAStats/MMA_events.html', context)
-    
+'''    
 Here you can see me navigate through the C.R.U.D features of my website.
 ![websitenavi](https://user-images.githubusercontent.com/95021801/154752282-79ee309d-a2c0-4da6-8bf4-5ab207f574c0.gif)
 
