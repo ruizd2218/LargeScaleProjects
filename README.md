@@ -75,4 +75,5 @@ information. This scrapes and parses specific data from the linked website and l
     return render(request, 'MMAStats/MMA_events.html', context)
     
 Here you can see me navigate through the C.R.U.D features of my website.
-![websitenavi](https://user-images.githubusercontent.com/95021801/154751755-589a0103-228e-45ab-925f-e303b605e06e.gif)
+![websitenavi](https://user-images.githubusercontent.com/95021801/154752282-79ee309d-a2c0-4da6-8bf4-5ab207f574c0.gif)
+
