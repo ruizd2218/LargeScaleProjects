@@ -1,2 +1,1 @@
-# LargeScaleProjects
-This is a repository containing a few summaries of my larger projects that I have been involved with.
+While at The Tech Academy, me and my peers worked together on making a large-scale website using the Django framework. This website was one that allowed users to create, update, and delete entries, view data that is web scraped from other sites, and look at a multitude of subjects that we tracked using our website. I created a section of the app called MMA Stats. This would track the current MMA champions in the UFC. This project taught me so much about bug-fixing, problem-solving, and troubleshooting. It also taught me so much about the Django framework that is impossible to learn from reading a book or watching a tutorial.
